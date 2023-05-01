@@ -27,6 +27,20 @@ img {
   height: auto;
 }
 
+.page-body {
+  // Чтобы был прилипающий футер
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: $oswald;
+  font-weight: $regular;
+  font-size: $main-size;
+  line-height: $main-interlining;
+  color: $main-black;
+}
+
 .hidden {
   display: none;
 }
@@ -42,4 +56,18 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row>* {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.freehosting-2domains-link {
+  display: none;
 }

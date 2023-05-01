@@ -1,0 +1,22 @@
+.button {
+  display: block;
+  width: 244px;
+  text-transform: uppercase;
+  color: $main-white;
+  background-color: $main-green;
+  font-size: $secondary-size;
+  line-height: 20px;
+  padding: 17px 26px;
+  transition: background-color, color, 0.3s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: $main-green-hover;
+    transition: background-color 0.3s ease-out;
+  }
+
+  &:active {
+    color: $color-text-hover;
+    transition: color 0.2s ease-out;
+  }
+}

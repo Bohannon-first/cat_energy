@@ -1,0 +1,140 @@
+.programs-cat {
+  margin-bottom: 71px;
+
+  @media (max-width: $large) {
+    margin-bottom: 45px;
+  }
+
+  // programs-cat__wrapper
+  &__wrapper {
+    justify-content: space-between;
+
+    @media (max-width: $extra-large) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+
+    @media (max-width: $large) {
+      align-items: flex-start;
+    }
+  }
+
+  // programs-cat__item
+  &__item {
+    background-color: $main-gray;
+    // width: 46.7%;
+    width: 570px;
+    padding: 77px 53px;
+
+    @media (max-width: $extra-large) {
+      // width: 708px;
+      width: 100%;
+      padding-bottom: 57px;
+      padding-right: 262px;
+    }
+  }
+
+  // programs-cat__item--weight-loss
+  &__item--weight-loss {
+    background-image: url('../img/background/desktop/weight-loss-desktop.png');
+    background-repeat: no-repeat;
+    background-position: 8% 17%;
+
+    @media (max-width: $extra-large) {
+      background-image: url('../img/background/desktop/weight-loss-tablet.png');
+      background-position: 95% 50%;
+    }
+  }
+
+  // programs-cat__item--weight-gain
+  &__item--weight-gain {
+    background-image: url('../img/background/desktop/weight-gain-desktop.png');
+    background-repeat: no-repeat;
+    background-position: 8% 17%;
+
+    @media (max-width: $extra-large) {
+      background-image: url('../img/background/desktop/weight-gain-tablet.png');
+      background-position: 95% 50%;
+    }
+  }
+
+  // programs-cat__title
+  &__title {
+    font-size: $third-title;
+    line-height: $third-title-interlining;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    text-align: center;
+    font-weight: $regular;
+
+    @media (max-width: $extra-large) {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+  }
+
+  // programs-cat__title--weight-again
+  &__title--weight-again {
+    transform: translateX(30px);
+
+    @media (max-width: $extra-large) {
+      transform: translateX(0);
+    }
+  }
+
+  // programs-cat__desc
+  &__desc {
+    font-family: $arial;
+    margin-bottom: 23px;
+
+    @media (max-width: $extra-large) {
+      margin-bottom: 48px;
+    }
+  }
+
+  // programs-cat__desc--weight-loss
+  &__desc--weight-loss {
+    width: 377px;
+  }
+
+  // programs-cat__desc--weight-gain
+  &__desc--weight-gain {
+    width: 342px;
+  }
+
+  // programs-car__link
+  &__link {
+    position: relative;
+    font-size: $secondary-size;
+    line-height: $secondary-interlining;
+    color: $main-black;
+    text-transform: uppercase;
+    transition: opacity transform 0.1s ease-out;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../img/icons/icon-arrow-right.svg');
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 12px;
+      top: 10px;
+      right: -45px;
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__link:hover {
+    &::after {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__link:active {
+    opacity: 0.3;
+    transition: opacity 0.1s ease-out;
+  }
+
+}
