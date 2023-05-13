@@ -1,0 +1,81 @@
+.map {
+
+  // map__container-address
+  &__container-address {
+    display: flex;
+    justify-content: space-between;
+    background-color: $main-white;
+    padding: 66px 72px 58px;
+    display: none;
+
+    @media (max-width: $large) {
+      display: flex;
+    }
+
+    @media (max-width: $medium) {
+      padding: 28px 20px;
+    }
+  }
+
+  // map__invitation-text
+  &__invitation-text {
+    font-size: $secondary-size;
+    line-height: $main-interlining;
+    color: $secondary-black;
+    text-transform: uppercase;
+    max-width: 171px;
+
+    @media (max-width: $medium) {
+      font-size: $main-size;
+      line-height: 18px;
+    }
+
+    @media (max-width: $small) {
+      max-width: 140px;
+    }
+  }
+
+  // map__address-text
+  &__address-text {
+    font-size: $main-size;
+    font-family: $arial;
+    line-height: 20px;
+    color: $secondary-gray;
+    max-width: 156px;
+    text-align: right;
+
+    span {
+      display: block;
+      margin-top: 20px;
+
+      @media (max-width: $medium) {
+        font-size: $little-size;
+        line-height: 20px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  // map__container
+  &__container {
+    position: relative;
+    padding: 0;
+    min-height: 400px;
+
+    @media (max-width: $medium) {
+      min-height: 362px;
+    }
+  }
+
+  .map__contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 400px;
+
+    @media (max-width: $medium) {
+      min-height: 362px;
+    }
+  }
+}

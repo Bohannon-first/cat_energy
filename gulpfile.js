@@ -28,6 +28,15 @@ const connectBootstrap = (done) => {
   done();
 };
 
+// Copying css files
+const copyCss = () => {
+  return gulp.src('./source/css/*.css')
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./build/css'))
+    .pipe(browserSync.stream());
+};
+
 // Sass-compiler
 const sassCompileCss = () => {
   return gulp.src('./source/scss/main.scss')
@@ -55,6 +64,13 @@ const html = () => {
 const scripts = () => {
   return gulp.src('./source/js/*.js')
     .pipe(gulp.dest('./build/js'))
+    .pipe(browserSync.stream());
+};
+
+// jQuery
+const jQuery = () => {
+  return gulp.src('./source/js/jQuery/*.js')
+    .pipe(gulp.dest('./build/js/jQuery'))
     .pipe(browserSync.stream());
 };
 
@@ -143,9 +159,11 @@ const esLinter = () => {
 exports.build = gulp.series(
   clean,
   connectBootstrap,
+  copyCss,
   sassCompileCss,
   html,
   scripts,
+  jQuery,
   optimizeImages,
   createWebp,
   sprite,
@@ -159,9 +177,11 @@ exports.build = gulp.series(
 exports.start = gulp.series(
   clean,
   connectBootstrap,
+  copyCss,
   sassCompileCss,
   html,
   scripts,
+  jQuery,
   optimizeImages,
   createWebp,
   sprite,

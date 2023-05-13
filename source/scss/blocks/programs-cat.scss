@@ -1,0 +1,223 @@
+.programs-cat {
+  margin-bottom: 71px;
+
+  @media (max-width: $large) {
+    margin-bottom: 45px;
+  }
+
+  @media (max-width: $medium) {
+    padding-top: 22px;
+    margin-bottom: 27px;
+  }
+
+  // programs-cat__wrapper
+  &__wrapper {
+    justify-content: space-between;
+
+    @media (max-width: $extra-large) {
+      flex-direction: column;
+      align-items: center;
+      row-gap: 30px;
+    }
+
+    @media (max-width: $large) {
+      align-items: flex-start;
+    }
+
+    @media (max-width: $medium) {
+      align-items: flex-start;
+      row-gap: 20px;
+    }
+  }
+
+  // programs-cat__item
+  &__item {
+    background-color: $main-gray;
+    // width: 46.7%;
+    width: 570px;
+    padding: 77px 53px;
+
+    @media (max-width: $extra-large) {
+      // width: 708px;
+      width: 100%;
+      padding-bottom: 57px;
+      padding-right: 262px;
+    }
+
+    @media (max-width: $medium) {
+      padding: 30px 20px 18px;
+      min-height: 266px;
+    }
+  }
+
+  // programs-cat__item--weight-loss
+  &__item--weight-loss {
+    background-image: url('../img/background/desktop/weight-loss-desktop.png');
+    background-repeat: no-repeat;
+    background-position: 8% 17%;
+
+    @media (max-width: $extra-large) {
+      background-image: url('../img/background/desktop/weight-loss-tablet.png');
+      background-position: 95% 50%;
+    }
+
+    @media (max-width: $medium) {
+      background-image: url('../img/background/mobile/weight-loss-mobile.png');
+      background-position: 3% 10%;
+    }
+  }
+
+  // programs-cat__item--weight-gain
+  &__item--weight-gain {
+    background-image: url('../img/background/desktop/weight-gain-desktop.png');
+    background-repeat: no-repeat;
+    background-position: 8% 17%;
+
+    @media (max-width: $extra-large) {
+      background-image: url('../img/background/desktop/weight-gain-tablet.png');
+      background-position: 95% 50%;
+    }
+
+    @media (max-width: $medium) {
+      background-image: url('../img/background/mobile/weight-gain-mobile.png');
+      background-position: 3% 10%;
+    }
+  }
+
+  // programs-cat__title
+  &__title {
+    font-size: $third-title;
+    line-height: $third-title-interlining;
+    text-transform: uppercase;
+    margin-bottom: 73px;
+    text-align: center;
+    font-weight: $regular;
+
+    @media (max-width: $extra-large) {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $medium) {
+      font-size: 24px;
+      line-height: $third-title-interlining;
+      text-align: center;
+      margin-bottom: 29px;
+    }
+  }
+
+  // programs-cat__title--weight-again
+  &__title--weight-again {
+    transform: translateX(30px);
+
+    @media (max-width: $extra-large) {
+      transform: translateX(0);
+    }
+  }
+
+  // programs-cat__desc
+  &__desc {
+    position: relative;
+    font-family: $arial;
+    margin-bottom: 23px;
+
+    @media (max-width: $extra-large) {
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: $medium) {
+      font-size: $little-size;
+      line-height: 18px;
+      margin-bottom: 38px;
+    }
+  }
+
+  // programs-cat__desc--weight-loss
+  &__desc--weight-loss {
+    width: 377px;
+
+    @media (max-width: $extra-large) {
+      width: 75vw;
+    }
+
+    @media (max-width: $medium) {
+      width: 88vw;
+    }
+
+    @media (max-width: $small) {
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $border-footer-item;
+      }
+    }
+  }
+
+  // programs-cat__desc--weight-gain
+  &__desc--weight-gain {
+    width: 342px;
+
+    @media (max-width: $extra-large) {
+      width: 70vw;
+    }
+
+    @media (max-width: $medium) {
+      width: 76vw;
+    }
+
+    @media (max-width: $small) {
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $border-footer-item;
+      }
+    }
+  }
+
+  // programs-car__link
+  &__link {
+    position: relative;
+    font-size: $secondary-size;
+    line-height: $secondary-interlining;
+    color: $main-black;
+    text-transform: uppercase;
+    transition: opacity transform 0.1s ease-out;
+
+    &::after {
+      position: absolute;
+      content: '';
+      background-image: url('../img/icons/icon-arrow-right.svg');
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 12px;
+      top: 10px;
+      right: -45px;
+      transition: transform 0.3s ease-out;
+    }
+
+    @media (max-width: $medium) {
+      font-size: $main-size;
+      line-height: $main-size;
+    }
+  }
+
+  &__link:hover {
+    &::after {
+      transform: scale(1.2);
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+  &__link:active {
+    opacity: 0.3;
+    transition: opacity 0.1s ease-out;
+  }
+}
