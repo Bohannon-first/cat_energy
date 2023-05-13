@@ -2,4 +2,9 @@
   font-size: $main-title;
   line-height: $main-title-interlining;
   font-weight: $regular;
+
+  @media (max-width: $medium) {
+    font-size: $third-title;
+    line-height: 40px;
+  }
 }

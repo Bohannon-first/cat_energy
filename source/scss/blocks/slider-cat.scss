@@ -7,6 +7,22 @@
     top: -60px !important;
   }
 
+  // slider-cat__img--fat
+  &__img--fat {
+    @media (max-width: $medium) {
+      width: 311px;
+      height: auto;
+    }
+  }
+
+  // slider-cat__img--skinny
+  &__img--skinny {
+    @media (max-width: $medium) {
+      width: 251px;
+      height: auto;
+    }
+  }
+
   .twentytwenty-handle {
     width: 34px;
     height: 34px;
@@ -84,6 +100,11 @@
     // margin-top: 20px;
     font-size: $secondary-size;
     line-height: $secondary-interlining;
+
+    @media (max-width: $medium) {
+      font-size: $main-size;
+      line-height: 20px;
+    }
   }
 
   // slider-cat__range-line-text--after

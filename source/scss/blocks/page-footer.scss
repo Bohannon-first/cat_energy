@@ -9,6 +9,14 @@
     padding-bottom: 58px;
   }
 
+  // page-footer__wrapper
+  &__wrapper>:not(:last-child) {
+    @media (max-width: $medium) {
+      border-bottom: 1px solid $border-footer-item;
+      width: 100%;
+    }
+  }
+
   // page-footer__logo
   &__logo {
     transition: opacity 0.3s ease-out;
@@ -21,6 +29,12 @@
     &:active {
       opacity: 0.6;
       transition: opacity 0.3s ease-out;
+    }
+
+    @media (max-width: $medium) {
+      display: block;
+      padding: 39px 0 32px;
+      text-align: center;
     }
   }
 
@@ -39,6 +53,10 @@
     flex-wrap: wrap;
     width: 167px;
     justify-content: space-between;
+
+    @media (max-width: $medium) {
+      padding: 22px 0 22px;
+    }
   }
 
   // page-footer__copyright-logo-svg

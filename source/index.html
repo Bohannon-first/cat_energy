@@ -14,52 +14,11 @@
 <body class="page-body">
   <header class="page-header">
     <div class="container page-header__container">
-      <!-- <div class="row align-items-center page-header__wrapper">
-        <div class="col-3 col-md-auto">
-          <a class="page-header__logo" href="#">
-            <picture>
-              <source type="image/webp" media="(max-width: 991px)"
-                srcset="img/content/tablet/logo-header-tablet.webp 1x, img/content/tablet/logo-header-tablet@2x.webp 2x"
-                width="174" height="51">
-              <source type="image/webp"
-                srcset="img/content/desktop/logo-header-desktop.webp 1x, img/content/desktop/logo-header-desktop@2x.webp 2x"
-                width="202" height="59">
-
-              <source media="(max-width: 991px)"
-                srcset="img/content/tablet/logo-header-tablet.png 1x, img/content/tablet/logo-header-tablet@2x.png 2x"
-                alt="Логотип Cat Energy" width="174" height="51">
-              <img src="img/content/desktop/logo-header-desktop.png"
-                srcset="img/content/desktop/logo-header-desktop@2x.png 2x" alt="Логотип Cat Energy" width="202"
-                height="59">
-            </picture>
-          </a>
-        </div>
-        <nav class="col main-nav">
-          <ul class="row main-nav__list">
-            <li class="col-auto mb-2 main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="#">Главная</a>
-            </li>
-            <li class="col-auto mb-2 main-nav__item">
-              <a class="main-nav__link" href="#">Каталог продукции</a>
-            </li>
-            <li class="col-auto mb-2 main-nav__item">
-              <a class="main-nav__link" href="#">Подбор программы</a>
-            </li>
-          </ul>
-        </nav>
-      </div> -->
       <!-- Новая навигационная панель -->
       <nav class="navbar navbar-expand-md main-nav">
         <div class="container-fluid main-nav__container">
           <a class="navbar-brand page-header__logo" href="#">
             <picture>
-              <!-- <source class="page-header__logo-img-desktop" type="image/webp" media="(max-width: 991px)"
-                srcset="img/content/tablet/logo-header-tablet.webp 1x, img/content/tablet/logo-header-tablet@2x.webp 2x"
-                width="174" height="51">
-              <source type="image/webp"
-                srcset="img/content/desktop/logo-header-desktop.webp 1x, img/content/desktop/logo-header-desktop@2x.webp 2x"
-                width="202" height="59"> -->
-
               <img class="page-header__logo-img-mobile" src="img/content/mobile/logo-header-mobile.png"
                 srcset="img/content/mobile/logo-header-mobile@2x.png 2x" alt="Логотип Cat Energy" width="198"
                 height="38">
@@ -73,7 +32,7 @@
           </a>
           <button class="navbar-toggler main-nav__button" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon main-nav__button-burger"></span>
           </button>
           <div class="collapse navbar-collapse main-nav__list-container" id="navbarNav">
             <ul class="navbar-nav main-nav__list">
@@ -100,10 +59,13 @@
           <div class="col-5 row flex-column promo__content">
             <h1 class="col-12 title title--main promo__title">Функциональное питание для котов</h1>
             <p class="col-12 promo__desc">Занялся собой? Займись котом!</p>
-            <a class="col-12 button" href="#">Подобрать программу</a>
+            <a class="col-12 button promo__button" href="#">Подобрать программу</a>
           </div>
           <div class="col-auto promo__image">
             <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/content/mobile/mobile-promo-food.webp 1x, img/content/mobile/mobile-promo-food@2x.webp 2x"
+                width="280" height="270">
               <source type="image/webp" media="(max-width: 1199px)"
                 srcset="img/content/tablet/tablet-promo-food.webp 1x, img/content/tablet/tablet-promo-food@2x.webp 2x"
                 width="709" height="609">
@@ -111,6 +73,9 @@
                 srcset="img/content/desktop/desktop-promo-food.webp 1x, img/content/desktop/desktop-promo-food@2x.webp 2x"
                 width="552" height="499">
 
+              <source media="(max-width: 767px)"
+                srcset="img/content/mobile/mobile-promo-food-mobile.png 1x, img/content/mobile/mobile-promo-food@2x.png 2x"
+                width="709" height="609">
               <source media="(max-width: 1199px)"
                 srcset="img/content/tablet/tablet-promo-food.png 1x, img/content/tablet/tablet-promo-food@2x.png 2x"
                 width="709" height="609">
@@ -198,11 +163,11 @@
               <div class="example-cat__content">
                 <div class="example-cat__content-weight">
                   <span>5 кг</span>
-                  <span>Снижение веса</span>
+                  <span>снижение веса</span>
                 </div>
                 <div class="example-cat__content-time">
                   <span>60 дней</span>
-                  <span>Затрачено времени</span>
+                  <span>затрачено времени</span>
                 </div>
                 <div class="example-cat__content-food-cost">
                   <span>Затраты на питание:</span>
@@ -212,10 +177,12 @@
             </div>
             <div class="col-12 col-xl-6 example-cat__slider-container">
               <div id="cats-container" class="slider-cat">
-                <img class="slider-cat__img" src="img/content/desktop/cat-fat.png" alt="Толстый кот" width="677"
-                  height="520" />
-                <img class="slider-cat__img" src="img/content/desktop/cat-skinny.png" alt="Худой кот" width="545"
-                  height="520" />
+                <picture>
+                  <img class="slider-cat__img slider-cat__img--fat" src="img/content/desktop/cat-fat.png"
+                    srcset="img/content/desktop/cat-fat@2x.png 2x" alt="Толстый кот" width="677" height="520" />
+                  <img class="slider-cat__img slider-cat__img--skinny" src="img/content/desktop/cat-skinny.png"
+                    srcset="img/content/desktop/cat-skinny@2x.png 2x" alt="Худой кот" width="545" height="520" />
+                </picture>
                 <div class="slider-cat__range-line">
                   <span class="slider-cat__range-line-text slider-cat__range-line-text--before">Было</span>
                   <span class="slider-cat__range-line-text slider-cat__range-line-text--after">Стало</span>
@@ -229,7 +196,7 @@
 
     <section class="map">
       <div class="container map__container-address">
-        <p class="map__invitation-text">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="map__invitation-text">Приглашаем<br> к сотрудничеству дилеров!</p>
         <p class="map__address-text">ул. Большая
           Конюшенная, д. 19/8
           <span>
@@ -252,13 +219,16 @@
   </main>
   <footer class="page-footer">
     <div class="container page-footer__container">
-      <div class="row justify-content-between">
+      <div class="d-flex flex-column align-items-center flex-md-row justify-content-md-between page-footer__wrapper">
         <a class="col-auto page-footer__logo" href="#">
           <img src="img/content/desktop/footer-logo.png" alt="Логотип Кэт-энерджи" width="128" height="24px">
         </a>
         <ul class="social-list">
           <li class="social-list__item">
             <a class="social-list__link" href="https://vk.com/">
+              <svg class='social-list__svg social-list__svg--mobile' width='23' height='13'>
+                <use xlink:href='img/sprite.svg#icon-vk-mobile'></use>
+              </svg>
               <svg class='social-list__svg' width='29' height='18'>
                 <use xlink:href='img/sprite.svg#icon-vk'></use>
               </svg>
@@ -267,6 +237,9 @@
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://www.instagram.com/">
+              <svg class='social-list__svg social-list__svg--mobile' width='16' height='16'>
+                <use xlink:href='img/sprite.svg#icon-instagram-mobile'></use>
+              </svg>
               <svg class='social-list__svg' width='23' height='23'>
                 <use xlink:href='img/sprite.svg#icon-instagram'></use>
               </svg>
@@ -275,6 +248,9 @@
           </li>
           <li class="social-list__item social-list__item--fb">
             <a class="social-list__link" href="https://facebook.com/">
+              <svg class='social-list__svg social-list__svg--fb-mobile social-list__svg--mobile' width='13' height='20'>
+                <use xlink:href='img/sprite.svg#icon-facebook-mobile'></use>
+              </svg>
               <svg class='social-list__svg social-list__svg--fb' width='15' height='29'>
                 <use xlink:href='img/sprite.svg#icon-facebook'></use>
               </svg>

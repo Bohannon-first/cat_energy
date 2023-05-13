@@ -6,6 +6,12 @@
     padding-top: 43px;
   }
 
+  @media (max-width: $medium) {
+    border-top: none;
+    background-color: $third-gray;
+    padding-top: 27px;
+  }
+
   // example-cat__wrapper
   &__wrapper {
     background-color: $main-gray;
@@ -17,9 +23,8 @@
       padding-top: 30px;
     }
 
-    @media (max-width: $extra-large) {
-      // padding-top: 30px;
-      // background-color: initial;
+    @media (max-width: $medium) {
+      padding-top: 0;
     }
   }
 
@@ -50,6 +55,12 @@
       width: 100%;
       margin-bottom: 54px;
     }
+
+    @media (max-width: $medium) {
+      font-size: $little-size;
+      line-height: 18px;
+      margin-bottom: 25px;
+    }
   }
 
   // example-cat__content
@@ -61,6 +72,14 @@
 
     @media (max-width: $extra-large) {
       width: 100%;
+    }
+
+    @media (max-width: $medium) {
+      // max-width: 50vw;
+      max-width: 280px;
+
+      align-self: center;
+      justify-content: space-between;
     }
   }
 
@@ -74,18 +93,32 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-bottom: 55px;
     padding: 15px 0 20px;
+
+    @media (max-width: $medium) {
+      width: 124px;
+      padding: 14px 0 17px;
+    }
   }
 
   .example-cat__content-weight {
     margin-right: 42px;
+
+    @media (max-width: $medium) {
+      margin-right: 31px;
+      margin-right: 0;
+    }
   }
 
   &__content-weight span:nth-child(1) {
     font-size: $strong-size;
     line-height: $third-title-interlining;
     text-transform: uppercase;
+
+    @media (max-width: $medium) {
+      font-size: 24px;
+      line-height: $main-interlining;
+    }
   }
 
   &__content-weight span:nth-child(2) {
@@ -93,6 +126,13 @@
     line-height: $little-interlining;
     color: $secondary-gray;
     font-family: $arial;
+
+    @media (max-width: $medium) {
+      font-size: 12px;
+      line-height: 12px;
+      width: 66px;
+      text-align: center;
+    }
   }
 
   // example-cat__content-time
@@ -100,6 +140,11 @@
     font-size: $strong-size;
     line-height: $third-title-interlining;
     text-transform: uppercase;
+
+    @media (max-width: $medium) {
+      font-size: 24px;
+      line-height: $main-interlining;
+    }
   }
 
   &__content-time span:nth-child(2) {
@@ -107,6 +152,13 @@
     line-height: $little-interlining;
     color: $secondary-gray;
     font-family: $arial;
+
+    @media (max-width: $medium) {
+      font-size: 12px;
+      line-height: 12px;
+      width: 66px;
+      text-align: center;
+    }
   }
 
   .example-cat__content-weight>span:nth-child(2),
@@ -114,6 +166,10 @@
     position: absolute;
     top: 63px;
     background-color: $main-gray;
+
+    @media (max-width: $medium) {
+      top: 48px;
+    }
   }
 
   // example-cat__content-food-cost
@@ -135,6 +191,21 @@
       @media (max-width: $extra-large) {
         margin-bottom: 9px;
       }
+
+      @media (max-width: $medium) {
+        margin: 0;
+      }
+    }
+
+    @media (max-width: $medium) {
+      flex-direction: row;
+      margin-left: 0;
+      margin-top: 30px;
+      font-size: $little-size;
+      line-height: 20px;
+
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -155,6 +226,17 @@
       margin-left: auto;
       margin-right: auto;
       // background-color: $main-gray;
+    }
+
+    @media (max-width: $medium) {
+      max-width: 311px;
+      margin-top: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: $small) {
+      width: 90vw;
     }
   }
 }

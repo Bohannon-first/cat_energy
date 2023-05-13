@@ -2,6 +2,10 @@
   min-height: 140px;
   z-index: 100;
 
+  @media (max-width: $medium) {
+    min-height: 71px;
+  }
+
   // page-header__container
   &__container {
     min-height: inherit;
@@ -18,7 +22,7 @@
     }
 
     @media (max-width: $medium) {
-      padding-top: 12px;
+      // padding-top: 12px;
       padding-left: 0;
       padding-right: 0;
     }
@@ -31,7 +35,9 @@
 
     @media (max-width: $medium) {
       padding: 0;
-      padding-bottom: 22px;
+      // padding-left: 20px;
+      margin-bottom: 22px;
+      padding: 0;
     }
   }
 

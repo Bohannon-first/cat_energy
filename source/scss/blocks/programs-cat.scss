@@ -5,6 +5,11 @@
     margin-bottom: 45px;
   }
 
+  @media (max-width: $medium) {
+    padding-top: 22px;
+    margin-bottom: 27px;
+  }
+
   // programs-cat__wrapper
   &__wrapper {
     justify-content: space-between;
@@ -17,6 +22,11 @@
 
     @media (max-width: $large) {
       align-items: flex-start;
+    }
+
+    @media (max-width: $medium) {
+      align-items: flex-start;
+      row-gap: 20px;
     }
   }
 
@@ -33,6 +43,11 @@
       padding-bottom: 57px;
       padding-right: 262px;
     }
+
+    @media (max-width: $medium) {
+      padding: 30px 20px 18px;
+      min-height: 266px;
+    }
   }
 
   // programs-cat__item--weight-loss
@@ -45,6 +60,11 @@
       background-image: url('../img/background/desktop/weight-loss-tablet.png');
       background-position: 95% 50%;
     }
+
+    @media (max-width: $medium) {
+      background-image: url('../img/background/mobile/weight-loss-mobile.png');
+      background-position: 3% 10%;
+    }
   }
 
   // programs-cat__item--weight-gain
@@ -56,6 +76,11 @@
     @media (max-width: $extra-large) {
       background-image: url('../img/background/desktop/weight-gain-tablet.png');
       background-position: 95% 50%;
+    }
+
+    @media (max-width: $medium) {
+      background-image: url('../img/background/mobile/weight-gain-mobile.png');
+      background-position: 3% 10%;
     }
   }
 
@@ -72,6 +97,13 @@
       text-align: left;
       margin-bottom: 24px;
     }
+
+    @media (max-width: $medium) {
+      font-size: 24px;
+      line-height: $third-title-interlining;
+      text-align: center;
+      margin-bottom: 29px;
+    }
   }
 
   // programs-cat__title--weight-again
@@ -85,22 +117,69 @@
 
   // programs-cat__desc
   &__desc {
+    position: relative;
     font-family: $arial;
     margin-bottom: 23px;
 
     @media (max-width: $extra-large) {
       margin-bottom: 48px;
     }
+
+    @media (max-width: $medium) {
+      font-size: $little-size;
+      line-height: 18px;
+      margin-bottom: 38px;
+    }
   }
 
   // programs-cat__desc--weight-loss
   &__desc--weight-loss {
     width: 377px;
+
+    @media (max-width: $extra-large) {
+      width: 75vw;
+    }
+
+    @media (max-width: $medium) {
+      width: 88vw;
+    }
+
+    @media (max-width: $small) {
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $border-footer-item;
+      }
+    }
   }
 
   // programs-cat__desc--weight-gain
   &__desc--weight-gain {
     width: 342px;
+
+    @media (max-width: $extra-large) {
+      width: 70vw;
+    }
+
+    @media (max-width: $medium) {
+      width: 76vw;
+    }
+
+    @media (max-width: $small) {
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -19px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: $border-footer-item;
+      }
+    }
   }
 
   // programs-car__link
@@ -123,6 +202,11 @@
       right: -45px;
       transition: transform 0.3s ease-out;
     }
+
+    @media (max-width: $medium) {
+      font-size: $main-size;
+      line-height: $main-size;
+    }
   }
 
   &__link:hover {
@@ -136,5 +220,4 @@
     opacity: 0.3;
     transition: opacity 0.1s ease-out;
   }
-
 }

@@ -8,6 +8,7 @@
   line-height: 20px;
   padding: 17px 26px;
   transition: background-color, color, 0.3s ease-out;
+  text-align: center;
 
   &:hover,
   &:focus {
@@ -18,5 +19,11 @@
   &:active {
     color: $color-text-hover;
     transition: color 0.2s ease-out;
+  }
+
+  @media (max-width: $medium) {
+    font-size: $little-size;
+    line-height: 18px;
+    // width: 100px;
   }
 }
