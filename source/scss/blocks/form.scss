@@ -1,0 +1,321 @@
+.form {
+  margin-top: 47px;
+  margin-bottom: 81px;
+
+  // form__title
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  // form__desc
+  &__desc {
+    font-size: $secondary-size;
+    line-height: $secondary-interlining;
+    width: 323px;
+    margin-bottom: 66px;
+  }
+
+  // form__main-info-container
+  &__main-info-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+  }
+
+  // form__name
+  // form__program
+  &__name,
+  &__program {
+    width: 50%;
+  }
+
+  &__program {
+    border: 1px solid $input-border;
+    padding: 25px 28px;
+  }
+
+  // form__legend
+  &__legend {
+    font-size: $third-title;
+    line-height: $third-title-interlining;
+    margin-bottom: 76px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 22px;
+      left: -500px;
+      width: 200vw;
+      height: 2px;
+      background-color: $main-green;
+    }
+  }
+
+  // form__legend--additionally-info
+  &__legend--additionally-info {
+    margin-bottom: 57px;
+  }
+
+  // form__fieldset
+  &__fieldset {
+    margin-bottom: 69px;
+  }
+
+  // form__label
+  // form__input
+  &__input,
+  &__label {
+    font-size: $secondary-size;
+    line-height: $secondary-interlining;
+    text-transform: uppercase;
+    color: $secondary-gray;
+  }
+
+  &__label {
+    margin-right: 14px;
+  }
+
+  &__input {
+    border: 1px solid $input-border;
+    flex-grow: 1;
+    padding: 10px 18px;
+    box-sizing: border-box;
+    transition: border-color .3s ease-in-out;
+    outline: none;
+  }
+
+  &__input:hover {
+    border-color: $border-color;
+    transition: border-color .3s ease-in-out;
+  }
+
+  &__input:focus {
+    outline: 2px solid $secondary-gray;
+  }
+
+  // Изменение цвета иконок в полях ввода при фокусе
+  &__input:focus+&__item-contacts-icon-email {
+    stroke: $main-green;
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  &__input:focus+&__item-contacts-icon-phone {
+    fill: $main-green;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  // Красная обводка на инпут при ошибке ввода
+  &__input--error {
+    border: 2px solid $border-color-error;
+  }
+
+  // form__input--program
+  &__item-program &__label--program {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__item-program:not(:last-child) {
+    margin-bottom: 25px;
+  }
+
+  &__item-program {
+    padding-left: 60px;
+  }
+
+  &__input--program+&__label--program::before {
+    position: absolute;
+    content: '';
+    top: -3px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border-color;
+    background-color: $main-white;
+    border-radius: 50%;
+    transition: border-color .3s ease-out;
+  }
+
+  &__input--program:checked+&__label--program::after {
+    position: absolute;
+    content: '';
+    top: 8px;
+    left: -49px;
+    width: 18px;
+    height: 18px;
+    background-color: $main-green;
+    border-radius: 50%;
+  }
+
+  // Изменение цвета обводки радиокнопки при ховере
+  &__input--program:hover+&__label--program::before {
+    border-color: $border-color-hover;
+    transition: border-color .3s ease-out;
+  }
+
+  // Задизейбленная радиокнопка
+  &__input--program:disabled+&__label--program {
+    opacity: 30%;
+  }
+
+  // form__label--program
+  &__label--program {
+    color: $third-black;
+  }
+
+  // form__label--additionally-info
+  &__label--additionally-info {
+    color: $main-black;
+  }
+
+  // form__item-name
+  &__item-name {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-name:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  // form__list-contacts
+  &__list-contacts {
+    display: flex;
+    // flex-wrap: wrap;
+    column-gap: 78px;
+    justify-content: space-between;
+  }
+
+  // form__item-contacts
+  &__item-contacts {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    width: 50%;
+  }
+
+  // form__item-contacts-icon-email
+  &__item-contacts-icon-email {
+    position: absolute;
+    content: '';
+    top: auto;
+    right: 19px;
+    width: 19px;
+    height: 14px;
+    stroke: $third-black;
+    transition: stroke 0.3s ease-in-out;
+  }
+
+  // form__item-contacts-icon-phone
+  &__item-contacts-icon-phone {
+    position: absolute;
+    content: '';
+    top: auto;
+    right: 19px;
+    width: 20px;
+    height: 20px;
+    fill: $third-black;
+    transition: fill 0.3s ease-in-out;
+  }
+
+  // form__label--contacts
+  &__label--contacts {
+    margin-right: 20px;
+  }
+
+  // form__input--contacts
+  &__input--contacts {
+    padding: 10px 18px 8px;
+  }
+
+  // form__input--textarea
+  &__input--textarea {
+    width: 100%;
+    min-height: 174px;
+    resize: none;
+  }
+
+  // form__list-additionally-info
+  &__list-additionally-info {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  // form__item-additionally-info
+  &__item-additionally-info &__label--additionally-info {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 61px;
+  }
+
+  &__input--additionally-info+&__label--additionally-info::before {
+    position: absolute;
+    content: '';
+    top: -3px;
+    left: -60px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $border-color;
+    background-color: $main-white;
+    transition: border-color .3s ease-in-out;
+  }
+
+  &__input--additionally-info:checked+&__label--additionally-info::after {
+    position: absolute;
+    content: '';
+    top: 10px;
+    left: -49px;
+    width: 18px;
+    height: 14px;
+    background-image: url('../img/icons/icon-checkbox.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  // Изменение цвета рамки чекбокса при ховере
+  &__input--additionally-info:hover+&__label--additionally-info::before,
+  &__input--additionally-info:focus+&__label--additionally-info::before {
+    border-color: $border-color-hover;
+    transition: border-color .3s ease-in-out;
+  }
+
+  // Задизейбленный чекбокс
+  &__input--additionally-info:disabled+&__label--additionally-info {
+    opacity: 30%;
+  }
+
+  &__item-additionally-info {
+    padding-left: 59px;
+  }
+
+  &__item-additionally-info:not(:nth-child(4n)) {
+    margin-right: 104px;
+  }
+
+  // form__footer
+  &__footer {
+    display: flex;
+    align-items: center;
+    column-gap: 81px;
+  }
+
+  // form__footer-button
+  &__footer-button {
+    border: none;
+    padding: 16px 26px;
+    width: 568px;
+  }
+
+  // form__footer-notice
+  &__footer-notice {
+    font-family: $arial;
+    line-height: 16px;
+  }
+}

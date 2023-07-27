@@ -75,9 +75,7 @@
     }
 
     @media (max-width: $medium) {
-      // max-width: 50vw;
       max-width: 280px;
-
       align-self: center;
       justify-content: space-between;
     }
@@ -185,15 +183,19 @@
       flex-direction: column;
       margin-left: auto;
       margin-top: 0;
+      text-align: right;
     }
 
     span:nth-child(1) {
+      margin-right: 63px;
+
       @media (max-width: $extra-large) {
+        margin-right: 0;
         margin-bottom: 9px;
       }
 
       @media (max-width: $medium) {
-        margin: 0;
+        margin-right: 5px;
       }
     }
 
@@ -209,10 +211,6 @@
     }
   }
 
-  &__content-food-cost span:nth-child(1) {
-    margin-right: 63px;
-  }
-
   // example-cat__slider-container
   &__slider-container {
     position: absolute;
@@ -225,7 +223,6 @@
       margin-top: 119px;
       margin-left: auto;
       margin-right: auto;
-      // background-color: $main-gray;
     }
 
     @media (max-width: $medium) {

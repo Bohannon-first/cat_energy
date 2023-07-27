@@ -52,6 +52,8 @@
   &__item {
     padding: 0;
 
+    // position: relative;
+
     @media (max-width: $medium) {
       padding: 22px 22px;
       border-top: 1px solid $border-color-alternate;
@@ -83,7 +85,7 @@
     line-height: $secondary-interlining;
     text-transform: uppercase;
     transition: color 0.3s ease-out;
-    padding: 0;
+    padding: 0 !important;
 
     @media (max-width: $extra-large) {
       color: $main-black;
@@ -102,20 +104,54 @@
     }
   }
 
-  &__link:hover,
-  &__link:focus {
+  // Состояние при наведении/нажатии на пункты гл. меню НА ГЛАВНОЙ СТРАНИЦЕ
+  &__item:hover &__link,
+  &__item:focus &__link {
     color: $color-text-hover;
     transition: color 0.3s ease-out;
   }
 
-  &__link:active {
+  &__item:active &__link {
     color: $color-text-active;
     transition: color 0.1s ease-out;
   }
 
-  // main-nav__link--active
-  &__link--active {
+  &__item--current:hover,
+  &__item--current:focus {
 
+    &::before {
+      background-color: $color-text-hover;
+      transition: color 0.3s ease-out;
+    }
+  }
+
+  &__item--current:active {
+    &::before {
+      background-color: $color-text-active;
+      transition: color 0.1s ease-out;
+    }
+  }
+
+  // main-nav__item--secondary
+  &__item--secondary &__link {
+    color: $main-black;
+  }
+
+  // Состояние при наведении/нажатии на пункты гл. меню НЕ НА ГЛ. СТРАНИЦЕ
+  &__item--secondary:hover &__link,
+  &__item--secondary:focus &__link {
+    color: $color-text-hover-alternate;
+  }
+
+  &__item--secondary:active &__link {
+    color: $color-text-active-alternate;
+  }
+
+  // main-nav__item--current
+  &__item--current {
+    position: relative;
+
+    // Нижнее подчеркивание активного пункта меню на главной странице
     &::before {
       position: absolute;
       content: '';
@@ -135,19 +171,27 @@
     }
   }
 
-  &__link--active:hover,
-  &__link--active:focus {
+  // main-nav__item--current-alternative
+  &__item--current-alternative {
+    position: relative;
 
+    // Нижнее подчеркивание активного пункта меню на других страницах
     &::before {
-      background-color: $color-text-hover;
-      transition: color 0.3s ease-out;
-    }
-  }
+      position: absolute;
+      content: '';
+      bottom: -8px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $main-green;
 
-  &__link--active:active {
-    &::before {
-      background-color: $color-text-active;
-      transition: color 0.1s ease-out;
+      @media (max-width: $extra-large) {
+        background-color: $main-green;
+      }
+
+      @media (max-width: $medium) {
+        display: none;
+      }
     }
   }
 }
