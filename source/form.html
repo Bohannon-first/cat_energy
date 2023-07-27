@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кэт Энерджи | страница формы</title>
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/twentytwenty.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body class="page-body">
+  <header class="page-header">
+    <div class="container page-header__container">
+      <!-- Новая навигационная панель -->
+      <nav class="navbar navbar-expand-md main-nav">
+        <div class="container-fluid main-nav__container">
+          <a class="navbar-brand page-header__logo" href="index.html">
+            <picture>
+              <img class="page-header__logo-img-mobile" src="img/content/mobile/logo-header-mobile.png"
+                srcset="img/content/mobile/logo-header-mobile@2x.png 2x" alt="Логотип Cat Energy" width="198"
+                height="38">
+              <source class="page-header__logo-img-tablet" media="(max-width: 991px)"
+                srcset="img/content/tablet/logo-header-tablet.png 1x, img/content/tablet/logo-header-tablet@2x.png 2x"
+                alt="Логотип Cat Energy" width="174" height="51">
+              <img class="page-header__logo-img-desktop" src="img/content/desktop/logo-header-desktop.png"
+                srcset="img/content/desktop/logo-header-desktop@2x.png 2x" alt="Логотип Cat Energy" width="202"
+                height="59">
+            </picture>
+          </a>
+          <button class="navbar-toggler main-nav__button" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon main-nav__button-burger"></span>
+          </button>
+          <div class="collapse navbar-collapse main-nav__list-container" id="navbarNav">
+            <ul class="navbar-nav main-nav__list">
+              <li class="nav-item main-nav__item main-nav__item--secondary">
+                <a class="nav-link main-nav__link" aria-current="page" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item main-nav__item main-nav__item--secondary">
+                <a class="nav-link main-nav__link" href="#">Каталог продукции</a>
+              </li>
+              <li class="nav-item main-nav__item main-nav__item--secondary main-nav__item--current-alternative">
+                <a class="nav-link main-nav__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main page-form">
+    <section class="form">
+      <div class="container">
+        <h1 class="col-12 title title--main form__title">Подбор программы</h1>
+        <p class="form__desc">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
+        <form class="form__cat-program" method="POST" action="" target="_blank" autocomplete="off">
+          <div class="form__main-info-container">
+            <fieldset class="form__fieldset form__name">
+              <ul class="form__list-name">
+                <li class="form__item-name">
+                  <label class="form__label" for="name">Имя:*</label>
+                  <input class="form__input" type="text" id="name" name="name" placeholder="Барсик">
+                </li>
+                <li class="form__item-name">
+                  <label class="form__label" for="weight">Вес (кг):*</label>
+                  <input class="form__input" type="number" id="weight" name="weight" placeholder="7">
+                </li>
+                <li class="form__item-name">
+                  <label class="form__label" for="age">Возраст (лет):</label>
+                  <input class="form__input" type="number" id="age" name="age" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form__fieldset form__program">
+              <ul class="form__list-program">
+                <li class="form__item-program">
+                  <input class="form__input form__input--program visually-hidden" type="radio" id="weight-loss"
+                    name="cat-program" value="reduce-weight" checked>
+                  <label class="form__label form__label--program" for="weight-loss">Похудение</label>
+                </li>
+                <li class="form__item-program">
+                  <input class="form__input form__input--program visually-hidden" type="radio" id="weight-gain"
+                    name="cat-program" value="add-weight">
+                  <label class="form__label form__label--program" for="weight-gain">Набор массы</label>
+                </li>
+                <li class="form__item-program">
+                  <input class="form__input form__input--program visually-hidden" type="radio" id="need-advice"
+                    name="cat-program" value="do-not-now">
+                  <label class="form__label form__label--program" for="need-advice">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <fieldset class="form__fieldset form__contacts">
+            <legend class="form__legend">Контактные данные (владельца кота)</legend>
+            <ul class="form__list-contacts">
+              <li class="form__item-contacts">
+                <label class="form__label form__label--contacts" for="">E-mail:*</label>
+                <input class="form__input form__input--contacts" type="text" placeholder="Kuklachev@gmail.com">
+                <svg class='form__item-contacts-icon-email' width='19' height='14'>
+                  <use xlink:href='img/sprite.svg#icon-email'></use>
+                </svg>
+              </li>
+              <li class="form__item-contacts">
+                <label class="form__label form__label--contacts" for="">Телефон:*</label>
+                <input class="form__input form__input--contacts" type="text" placeholder="8 (960) 900-60-90">
+                <svg class='form__item-contacts-icon-phone' width='20' height='20'>
+                  <use xlink:href='img/sprite.svg#icon-phone'></use>
+                </svg>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form__fieldset form__comment">
+            <legend class="form__legend">Комментарий</legend>
+            <textarea class="form__input form__input--textarea" name="text-comment" id="text-comment"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="form__fieldset form__additionally-info">
+            <legend class="form__legend form__legend--additionally-info">Дополнительно</legend>
+            <ul class="form__list-additionally-info">
+              <li class="form__item-additionally-info">
+                <input class="form__input form__input--additionally-info visually-hidden" type="checkbox" id="sweetener"
+                  name="additionally-info-sweetener" checked>
+                <label class="form__label form__label--additionally-info" for="sweetener">Сахарозаменитель</label>
+              </li>
+              <li class="form__item-additionally-info">
+                <input class="form__input form__input--additionally-info visually-hidden" type="checkbox"
+                  id="drinking-water" name="additionally-info-drinking-water">
+                <label class="form__label form__label--additionally-info" for="drinking-water">Питьевая вода</label>
+              </li>
+              <li class="form__item-additionally-info">
+                <input class="form__input form__input--additionally-info visually-hidden" type="checkbox" id="milk"
+                  name="additionally-info-milk">
+                <label class="form__label form__label--additionally-info" for="milk">Молоко</label>
+              </li>
+              <li class="form__item-additionally-info">
+                <input class="form__input form__input--additionally-info visually-hidden" type="checkbox" id="vitamins"
+                  name="additionally-info-vitamins">
+                <label class="form__label form__label--additionally-info" for="vitamins">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="form__footer">
+            <button class="button form__footer-button">Отправить заявку</button>
+            <p class="form__footer-notice">* — Обязательные поля</p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="map">
+      <div class="container map__container-address">
+        <p class="map__invitation-text">Приглашаем<br> к сотрудничеству дилеров!</p>
+        <p class="map__address-text">ул. Большая
+          Конюшенная, д. 19/8
+          <span>
+            Санкт-Петербург
+          </span>
+        </p>
+      </div>
+      <div class="container-fluid map__container">
+        <iframe class="map__contacts"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d249.82598932161184!2d30.3230782!3d59.938648!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1679852618223!5m2!1sru!2sru"
+          allowfullscreen=""></iframe>
+        <picture>
+          <source media="(max-width: 320px)" srcset="img/content/mobile/map-mobile.png">
+          <source media="(max-width: 768px)" srcset="img/content/tablet/map-tablet.png">
+          <img class="map__image" src="img/content/desktop/map-desktop.png"
+            alt="Карта местонахождения интернет-магазина Кэт-энерджи по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8">
+        </picture>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <div class="container page-footer__container">
+      <div class="d-flex flex-column align-items-center flex-md-row justify-content-md-between page-footer__wrapper">
+        <a class="col-auto page-footer__logo" href="#">
+          <img src="img/content/desktop/footer-logo.png" alt="Логотип Кэт-энерджи" width="128" height="24px">
+        </a>
+        <ul class="social-list">
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://vk.com/">
+              <svg class='social-list__svg social-list__svg--mobile' width='23' height='13'>
+                <use xlink:href='img/sprite.svg#icon-vk-mobile'></use>
+              </svg>
+              <svg class='social-list__svg' width='29' height='18'>
+                <use xlink:href='img/sprite.svg#icon-vk'></use>
+              </svg>
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
+          </li>
+          <li class="social-list__item">
+            <a class="social-list__link" href="https://www.instagram.com/">
+              <svg class='social-list__svg social-list__svg--mobile' width='16' height='16'>
+                <use xlink:href='img/sprite.svg#icon-instagram-mobile'></use>
+              </svg>
+              <svg class='social-list__svg' width='23' height='23'>
+                <use xlink:href='img/sprite.svg#icon-instagram'></use>
+              </svg>
+              <span class="visually-hidden">Инстаграм</span>
+            </a>
+          </li>
+          <li class="social-list__item social-list__item--fb">
+            <a class="social-list__link" href="https://facebook.com/">
+              <svg class='social-list__svg social-list__svg--fb-mobile social-list__svg--mobile' width='13' height='20'>
+                <use xlink:href='img/sprite.svg#icon-facebook-mobile'></use>
+              </svg>
+              <svg class='social-list__svg social-list__svg--fb' width='15' height='29'>
+                <use xlink:href='img/sprite.svg#icon-facebook'></use>
+              </svg>
+              <span class="visually-hidden">Фейсбук</span>
+            </a>
+          </li>
+        </ul>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-logo ms-auto" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="page-footer__copyright-name">
+              HTML Academy
+            </span>
+            <svg class='page-footer__copyright-logo-svg' width='27' height='34'>
+              <use xlink:href='img/sprite.svg#icon-html-academy'></use>
+            </svg>
+          </a>
+          </p>
+        </div>
+      </div>
+  </footer>
+  <script src="js/bootstrap/bootstrap.min.js"></script>
+  <script src="js/jQuery/jquery-3.6.4.min.js"></script>
+  <script src="js/jQuery/jquery.event.move.js"></script>
+  <script src="js/jQuery/jquery.twentytwenty.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
+</html>
